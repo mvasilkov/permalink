@@ -1,0 +1,12 @@
+{
+    "name": "permalink",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:mvasilkov/permalink.git"
+    },
+    "devDependencies": {
+        "jshint": "2.x",
+        "mocha": "1.x"
+    }
+}
