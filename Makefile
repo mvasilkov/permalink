@@ -2,7 +2,7 @@ jshint = node_modules/.bin/jshint
 mocha = node_modules/.bin/mocha
 npm = npm
 
-all: dependencies jshint test
+all: dependencies jshint mocha
 
 dependencies:
 	$(npm) install
@@ -10,5 +10,5 @@ dependencies:
 jshint:
 	$(jshint) permalink.js
 
-test:
-	$(mocha)
+mocha:
+	$(mocha) -R spec

@@ -1,12 +1,15 @@
 {
     "name": "permalink",
     "version": "0.0.1",
+    "author": "Mark Vasilkov <mvasilkov@gmail.com>",
+    "main": "permalink",
     "repository": {
         "type": "git",
         "url": "git@github.com:mvasilkov/permalink.git"
     },
     "devDependencies": {
         "jshint": "2.x",
-        "mocha": "1.x"
+        "mocha": "1.x",
+        "should": "1.x"
     }
 }
