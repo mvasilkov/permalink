@@ -5,6 +5,9 @@
     "keywords": ["unicode", "url", "permalink", "seo", "slug", "slugify"],
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",
     "main": "permalink",
+    "scripts": {
+        "test": "mocha"
+    },
     "repository": {
         "type": "git",
         "url": "git@github.com:mvasilkov/permalink.git"
