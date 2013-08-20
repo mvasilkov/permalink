@@ -17,7 +17,7 @@
                 }
                 result += c
             }
-            else beforeNext = true
+            else beforeNext = result.length !== 0
         }
 
         return result.toLowerCase()
