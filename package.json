@@ -11,5 +11,6 @@
         "jshint": "2.x",
         "mocha": "1.x",
         "should": "1.x"
-    }
+    },
+    "license": "MIT"
 }
