@@ -1,6 +1,8 @@
 {
     "name": "permalink",
     "version": "0.0.1",
+    "description": "Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.",
+    "keywords": ["unicode", "url", "permalink", "seo", "slug", "slugify"],
     "author": "Mark Vasilkov <mvasilkov@gmail.com>",
     "main": "permalink",
     "repository": {
