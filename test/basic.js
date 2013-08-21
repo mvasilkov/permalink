@@ -12,6 +12,12 @@ describe('fmt', function () {
         fmt(null).should.equal('')
     })
 
+    it('should return an empty string for blank inputs', function () {
+        fmt('').should.equal('')
+        fmt('    ').should.equal('')
+        fmt('\t\n').should.equal('')
+    })
+
     it('should return readable urls', function () {
         fmt('hello, world').should.equal('hello-world')
         fmt('hello, world', '_').should.equal('hello_world')
