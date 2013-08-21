@@ -7,6 +7,11 @@
             beforeNext = false,
             result = ''
 
+        if (typeof options == 'object') {
+            if (options.hasOwnProperty('separator'))
+                separator = options.separator
+        }
+
         for (var r = 0; r < input.length; ++r) {
             var c = input[r]
 

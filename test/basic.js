@@ -16,6 +16,7 @@ describe('fmt', function () {
         fmt('').should.equal('')
         fmt('    ').should.equal('')
         fmt('\t\n').should.equal('')
+        fmt('----').should.equal('')
     })
 
     it('should return readable urls', function () {
@@ -31,6 +32,10 @@ describe('fmt', function () {
         fmt('\tSimple API\n', '~').should.equal('simple~api')
     })
 
-    it('', function () {
+    it('should take options object as an argument', function () {
+        fmt('Eat flaming death', {}).should.equal('eat-flaming-death')
+        fmt('Eat flaming death', {foo: 'bar'}).should.equal('eat-flaming-death')
+        fmt('Eat flaming death', {separator: '_'}).should.equal('eat_flaming_death')
+        fmt('Eat flaming death', {separator: '~~~'}).should.equal('eat~~~flaming~~~death')
     })
 })
