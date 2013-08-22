@@ -11,6 +11,7 @@ describe('utf8', function () {
             'russischer-warnschuss-fuer-kiews-eu-traeume')
         eql('Stöber: "Pressefreiheit ist ein großes Gut"',
             'stoeber-pressefreiheit-ist-ein-grosses-gut')
+        eql('PÖßNECK', 'poessneck')
     })
 
     it('should downcode Russian', function () {
