@@ -22,6 +22,13 @@
                 }
                 result += c
             }
+            else if (charMap.hasOwnProperty(c)) {
+                if (beforeNext) {
+                    result += separator
+                    beforeNext = false
+                }
+                result += charMap[c]
+            }
             else beforeNext = result.length !== 0
         }
 
@@ -30,4 +37,10 @@
 
     if (typeof module != 'undefined' && module.exports)
         module.exports = fmt
+
+    var charMap = {
+        /* German */
+        'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue', 'ẞ': 'SS',
+        'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss'
+    }
 }())
