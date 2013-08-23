@@ -3,11 +3,14 @@
         if (typeof input != 'string')
             return ''
 
-        var separator = typeof options == 'string'? options: '-',
+        var separator = '-',
             beforeNext = false,
             result = ''
 
-        if (typeof options == 'object') {
+        if (typeof options == 'string') {
+            separator = options
+        }
+        else if (typeof options == 'object') {
             if (options.hasOwnProperty('separator'))
                 separator = options.separator
         }
