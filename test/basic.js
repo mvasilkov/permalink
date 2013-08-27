@@ -2,9 +2,7 @@ var should = require('should'),
     fmt = require('../permalink')
 
 describe('fmt', function () {
-    it('should be a function', function () {
-        fmt.should.be.a('function')
-    })
+    it('should be a function', function () { fmt.should.be.a('function') })
 
     it('should return an empty string for bad inputs', function () {
         fmt().should.equal('')

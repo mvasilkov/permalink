@@ -32,14 +32,18 @@
                 }
                 result += charMap[c]
             }
+            else if (symbolMap.hasOwnProperty(c)) {
+                result += separator
+                beforeNext = true
+                result += symbolMap[c]
+            }
             else beforeNext = result.length !== 0
         }
 
         return result.toLowerCase()
     }
 
-    if (typeof module != 'undefined' && module.exports)
-        module.exports = fmt
+    if (typeof module != 'undefined' && module.exports) module.exports = fmt
 
     var charMap = {
         /* German */
@@ -56,5 +60,10 @@
         'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U',
         'Ф': 'F', 'Х': 'H', 'Ц': 'C', 'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Sh', 'Ъ': '',
         'Ы': 'Y', 'Ь': '', 'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya'
+    }
+
+    var symbolMap = {
+        '★': 'star',
+        '☆': 'star'
     }
 }())

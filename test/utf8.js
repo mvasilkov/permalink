@@ -24,4 +24,9 @@ describe('utf8', function () {
         eql('Путин пообещал защитные меры в случае евроинтеграции Украины',
             'putin-poobeshal-zashitnye-mery-v-sluchae-evrointegracii-ukrainy')
     })
+
+    it('should replace pictographs', function () {
+        eql('BLACK★ROCK SHOOTER', 'black-star-rock-shooter')
+        eql('Lucky ☆ Star', 'lucky-star-star')
+    })
 })
