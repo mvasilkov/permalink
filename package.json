@@ -3,7 +3,7 @@
     "version": "0.0.2",
     "description": "Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.",
     "keywords": ["unicode", "url", "permalink", "seo", "slug", "slugify"],
-    "author": "Mark Vasilkov <mvasilkov@gmail.com>",
+    "author": "Mark Vasilkov (https://github.com/mvasilkov)",
     "main": "permalink",
     "scripts": {
         "test": "mocha"

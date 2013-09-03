@@ -1,3 +1,6 @@
+/* Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.
+ * Copyright (c) 2013 Mark Vasilkov (https://github.com/mvasilkov)
+ * License: MIT */
 (function () {
     function fmt(input, options) {
         if (typeof input != 'string')
