@@ -1,12 +1,12 @@
 var assert = require('assert'),
     urlfmt = require('../permalink')
 
-function eql(a, b) { assert.strictEqual(a, b) }
+function eq(a, b) { assert.strictEqual(a, b) }
 
-String.prototype.equal = function (arg) { eql('' + this, arg) }
+String.prototype.equal = function (arg) { eq('' + this, arg) }
 
 describe('urlfmt', function () {
-    it('should be a function', function () { eql(typeof urlfmt, 'function') })
+    it('should be a function', function () { eq(typeof urlfmt, 'function') })
 
     it('should return an empty string for bad inputs', function () {
         urlfmt().equal('')
