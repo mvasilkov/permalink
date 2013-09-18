@@ -1,7 +1,7 @@
 var should = require('should'),
-    fmt = require('../permalink')
+    urlfmt = require('../permalink')
 
-function eql(a, b) { fmt(a).should.equal(b) }
+function eql(a, b) { urlfmt(a).should.equal(b) }
 
 describe('utf8', function () {
     it('should downcode German', function () {

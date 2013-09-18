@@ -2,7 +2,7 @@
  * Copyright (c) 2013 Mark Vasilkov (https://github.com/mvasilkov)
  * License: MIT */
 (function () {
-    function fmt(input, options) {
+    function urlfmt(input, options) {
         if (typeof input != 'string')
             return ''
 
@@ -46,7 +46,7 @@
         return result.toLowerCase()
     }
 
-    if (typeof module != 'undefined' && module.exports) module.exports = fmt
+    if (typeof module != 'undefined' && module.exports) module.exports = urlfmt
 
     var charMap = {
         /* German */

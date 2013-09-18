@@ -1,39 +1,39 @@
 var should = require('should'),
-    fmt = require('../permalink')
+    urlfmt = require('../permalink')
 
-describe('fmt', function () {
-    it('should be a function', function () { fmt.should.be.a('function') })
+describe('urlfmt', function () {
+    it('should be a function', function () { urlfmt.should.be.a('function') })
 
     it('should return an empty string for bad inputs', function () {
-        fmt().should.equal('')
-        fmt({bad: 'wrong'}).should.equal('')
-        fmt(null).should.equal('')
+        urlfmt().should.equal('')
+        urlfmt({bad: 'wrong'}).should.equal('')
+        urlfmt(null).should.equal('')
     })
 
     it('should return an empty string for blank inputs', function () {
-        fmt('').should.equal('')
-        fmt('    ').should.equal('')
-        fmt('\t\n').should.equal('')
-        fmt('----').should.equal('')
+        urlfmt('').should.equal('')
+        urlfmt('    ').should.equal('')
+        urlfmt('\t\n').should.equal('')
+        urlfmt('----').should.equal('')
     })
 
     it('should return readable urls', function () {
-        fmt('hello, world').should.equal('hello-world')
-        fmt('hello, world', '_').should.equal('hello_world')
-        fmt('Visual Basic .NET').should.equal('visual-basic-net')
-        fmt('Visual Basic .NET', '_').should.equal('visual_basic_net')
+        urlfmt('hello, world').should.equal('hello-world')
+        urlfmt('hello, world', '_').should.equal('hello_world')
+        urlfmt('Visual Basic .NET').should.equal('visual-basic-net')
+        urlfmt('Visual Basic .NET', '_').should.equal('visual_basic_net')
     })
 
     it('should ignore leading and trailing spaces', function () {
-        fmt('  Simple   API', '~').should.equal('simple~api')
-        fmt('Simple  API   ', '~').should.equal('simple~api')
-        fmt('\tSimple API\n', '~').should.equal('simple~api')
+        urlfmt('  Simple   API', '~').should.equal('simple~api')
+        urlfmt('Simple  API   ', '~').should.equal('simple~api')
+        urlfmt('\tSimple API\n', '~').should.equal('simple~api')
     })
 
     it('should take options object as an argument', function () {
-        fmt('Eat flaming death', {}).should.equal('eat-flaming-death')
-        fmt('Eat flaming death', {foo: 'bar'}).should.equal('eat-flaming-death')
-        fmt('Eat flaming death', {separator: '_'}).should.equal('eat_flaming_death')
-        fmt('Eat flaming death', {separator: '~~~'}).should.equal('eat~~~flaming~~~death')
+        urlfmt('Eat flaming death', {}).should.equal('eat-flaming-death')
+        urlfmt('Eat flaming death', {foo: 'bar'}).should.equal('eat-flaming-death')
+        urlfmt('Eat flaming death', {separator: '_'}).should.equal('eat_flaming_death')
+        urlfmt('Eat flaming death', {separator: '~~~'}).should.equal('eat~~~flaming~~~death')
     })
 })
