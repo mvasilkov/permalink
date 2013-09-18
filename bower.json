@@ -1,0 +1,9 @@
+{
+    "name": "permalink",
+    "version": "0.0.2",
+    "main": "permalink.js",
+    "ignore": ["Makefile", "package.json", "test{_client,}"],
+    "devDependencies": {
+        "requirejs": "2.x"
+    }
+}
