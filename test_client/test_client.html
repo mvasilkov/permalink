@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Permalink</title>
+        <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+    </head>
+    <body>
+        <div id="mocha"></div>
+        <script src="../bower_components/requirejs/require.js"></script>
+        <script src="../node_modules/mocha/mocha.js"></script>
+        <script>
+            require.config({
+                paths: {
+                    x_basic: '../test/basic',
+                    x_utf8: '../test/utf8'
+                }
+            })
+            mocha.setup('bdd')
+            require(['assert', '../permalink'], function () {
+                require(['x_basic', 'x_utf8'], function () {
+                    mocha.checkLeaks()
+                    mocha.run()
+                })
+            })
+        </script>
+    </body>
+</html>

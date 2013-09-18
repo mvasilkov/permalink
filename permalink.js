@@ -47,6 +47,8 @@
     }
 
     if (typeof module != 'undefined' && module.exports) module.exports = urlfmt
+    else if (typeof define == 'function' && define.amd) define(function () { return urlfmt })
+    else if (typeof window != 'undefined') window.urlfmt = urlfmt
 
     var charMap = {
         /* German */
