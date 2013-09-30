@@ -1,9 +1,9 @@
 var assert = require('assert'),
     urlfmt = require('../permalink')
 
-function eql(a, b) { assert.strictEqual(urlfmt(a), b) }
-
 describe('utf8', function () {
+    function eql(a, b) { assert.strictEqual(urlfmt(a), b) }
+
     it('should downcode German', function () {
         eql('Namibia löscht sein historisches Gedächtnis',
             'namibia-loescht-sein-historisches-gedaechtnis')
