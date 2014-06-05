@@ -1,5 +1,5 @@
 /* Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.
- * Copyright (c) 2013 Mark Vasilkov (https://github.com/mvasilkov)
+ * Copyright (c) 2014 Mark Vasilkov (https://github.com/mvasilkov)
  * License: MIT */
 (function () {
     function urlfmt(input, options) {
@@ -46,9 +46,9 @@
         return result.toLowerCase()
     }
 
-    if (typeof module != 'undefined' && module.exports) module.exports = urlfmt
+    if (typeof module == 'object' && module.exports) module.exports = urlfmt
     else if (typeof define == 'function' && define.amd) define(function () { return urlfmt })
-    else if (typeof window != 'undefined') window.urlfmt = urlfmt
+    else if (typeof window == 'object') window.urlfmt = urlfmt
 
     var charMap = {
         /* German */
