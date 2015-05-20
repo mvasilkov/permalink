@@ -1,5 +1,5 @@
 /* Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.
- * Copyright (c) 2014 Mark Vasilkov (https://github.com/mvasilkov)
+ * Copyright (c) 2015 Mark Vasilkov (https://github.com/mvasilkov)
  * License: MIT */
 (function () {
     function urlfmt(input, options) {
