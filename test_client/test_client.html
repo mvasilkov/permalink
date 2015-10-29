@@ -17,7 +17,7 @@
                 }
             })
             mocha.setup('bdd')
-            require(['assert', '../permalink'], function () {
+            require(['assert', '../permalink.js'], function () {
                 require(['x_basic', 'x_utf8'], function () {
                     mocha.checkLeaks()
                     mocha.run()

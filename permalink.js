@@ -1,8 +1,10 @@
 /* Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.
- * Copyright (c) 2015 Mark Vasilkov (https://github.com/mvasilkov)
+ * Copyright (c) 2016 Mark Vasilkov (https://github.com/mvasilkov)
  * License: MIT */
 (function () {
-    function urlfmt(input, options) {
+    'use strict'
+
+    function permalink(input, options) {
         if (typeof input != 'string')
             return ''
 
@@ -18,8 +20,8 @@
                 separator = options.separator
         }
 
-        for (var r = 0; r < input.length; ++r) {
-            var c = input[r]
+        for (var i = 0; i < input.length; ++i) {
+            var c = input[i]
 
             if (/[a-zA-Z0-9]/.test(c)) {
                 if (beforeNext) {
@@ -46,9 +48,22 @@
         return result.toLowerCase()
     }
 
-    if (typeof module == 'object' && module.exports) module.exports = urlfmt
-    else if (typeof define == 'function' && define.amd) define(function () { return urlfmt })
-    else if (typeof window == 'object') window.urlfmt = urlfmt
+    if (typeof module == 'object' && module.exports)
+        module.exports = permalink
+
+    else if (typeof define == 'function' && define.amd)
+        define(function () { return permalink })
+
+    else if (typeof window == 'object') {
+        window.permalink = permalink
+
+        window.urlfmt = function () {
+            if (typeof console == 'object' && typeof console.warn == 'function')
+                console.warn('urlfmt() is deprecated, use permalink() instead.')
+
+            permalink.apply(null, arguments)
+        }
+    }
 
     var charMap = {
         /* German */

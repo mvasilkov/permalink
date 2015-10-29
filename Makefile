@@ -13,7 +13,7 @@ jshint: node_modules
 	@ $(jshint) permalink.js test/*.js
 
 mocha: node_modules
-	@ $(mocha) -R spec
+	@ $(mocha)
 
 test_client/assert.js: node_modules
 	@ $(browserify) -r assert -s assert -o $@

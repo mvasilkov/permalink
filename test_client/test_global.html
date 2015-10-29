@@ -14,7 +14,7 @@
             function require(mp) {
                 switch (mp) {
                     case 'assert': return assert
-                    case '../permalink': return urlfmt
+                    case '../permalink.js': return permalink
                 }
                 throw Error('require: wtf is ' + mp)
             }
