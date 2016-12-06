@@ -25,6 +25,17 @@ describe('utf8', function () {
             'putin-poobeshal-zashitnye-mery-v-sluchae-evrointegracii-ukrainy')
     })
 
+    it('should downcode Greek monotonic', function () {
+        eql('Τη γλώσσα μου έδωσαν ελληνική',
+            'ti-glossa-mou-edosan-elliniki')
+        eql('το σπίτι φτωχικό στις αμμουδιές του Ομήρου.',
+            'to-spiti-ftoxiko-stis-ammoudies-tou-omirou')
+        eql('Μονάχη έγνοια η γλώσσα μου στις αμμουδιές',
+            'monaxi-egnoia-i-glossa-mou-stis-ammoudies')
+        eql('Άξιον Εστί, Οδυσσέας Ελύτης ',
+            'aksion-esti-odusseas-elutis')
+    })
+
     it('should replace pictographs', function () {
         eql('BLACK★ROCK SHOOTER', 'black-star-rock-shooter')
         eql('Lucky ☆ Star', 'lucky-star-star')
