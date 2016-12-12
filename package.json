@@ -1,6 +1,6 @@
 {
     "name": "permalink",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Make clean, readable, SEO-friendly URLs. Slugify Unicode strings.",
     "keywords": ["browser", "unicode", "url", "permalink", "seo", "slug", "slugify"],
     "author": "Mark Vasilkov (https://github.com/mvasilkov)",
@@ -13,10 +13,10 @@
         "url": "git@github.com:mvasilkov/permalink.git"
     },
     "devDependencies": {
-        "jshint": "~2.8",
-        "mocha": "~2.3",
-        "browserify": "~12.0",
-        "bower": "~1.6"
+        "jshint": "~2.9",
+        "mocha": "~3.2",
+        "browserify": "~13.1",
+        "bower": "~1.8"
     },
     "license": "MIT"
 }
